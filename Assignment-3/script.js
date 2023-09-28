@@ -64,7 +64,13 @@ tdPercentage.innerHTML='100%'
 
 var trdropdown=document.createElement("tr");
 trdropdown.classList.add("dropDownTextArea");
-trdropdown.innerHTML='Advisor:<br /><br /> Award Details<br /> Summer 1-2014(TA)<br /> Budget Number: <br /> Tuition Number: <br /> Comments:<br /><br /><br /> Award Status:<br /><br /><br />'
+
+var tddropdown= document.createElement("td");
+
+tddropdown.innerHTML='Advisor:<br /><br /> Award Details<br /> Summer 1-2014(TA)<br /> Budget Number: <br /> Tuition Number: <br /> Comments:<br /><br /><br /> Award Status:<br /><br /><br />'
+tddropdown.colSpan = 8;
+
+// trdropdown.innerHTML='Advisor:<br /><br /> Award Details<br /> Summer 1-2014(TA)<br /> Budget Number: <br /> Tuition Number: <br /> Comments:<br /><br /><br /> Award Status:<br /><br /><br />'
 
 
 trnode.appendChild(tdcheckBoxNode);
@@ -75,7 +81,7 @@ trnode.appendChild(tdSemester)
 trnode.appendChild(tdtype);
 trnode.appendChild(tdBudget);
 trnode.appendChild(tdPercentage);
-
+trdropdown.appendChild(tddropdown);
 
 tbody.appendChild(trnode);
 tbody.appendChild(trdropdown);
