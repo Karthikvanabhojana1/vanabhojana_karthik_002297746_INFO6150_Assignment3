@@ -115,7 +115,6 @@ if(checkBox.checked==true ){
   editbutton.innerHTML = '<button id="edited" type="button" onclick="onEditRow(this)">Edit</button>' 
   buttonselection.style.backgroundColor = 'orange'
 if(count===1) {
-  console.log("222")
   trnode.appendChild(thdeletenode);
   trnode.appendChild(theditnode); 
   buttonselection.style.backgroundColor = 'orange'
@@ -217,11 +216,12 @@ function onselectdropdown(element){
 
 function onEditRow(editRef){
 
-  // var table=document.getElementById("myTable");
-  var selectedRow = editRef.parentElement.parentElement;
-  // // var index=selectedRow.rowIndex;
-  var selectedStudent = editRef.parentElement.parentElement.firstElementChild.nextSibling.innerHTML
-  
+  // // var table=document.getElementById("myTable");
+  // var selectedRow = editRef.parentElement.parentElement;
+  // // // var index=selectedRow.rowIndex;
+  var selectedStudent = editRef.parentElement.parentElement.firstElementChild.nextElementSibling.innerHTML;
+  // editRef.parentElement.parentElement.firstElementChild.nextElementSibling.innerHTML
+  // console.log(selectedStudent);
 prompt("Edit details of " +selectedStudent);
 alert(selectedStudent +" data updated successfully");
 
